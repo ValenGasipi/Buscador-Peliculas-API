@@ -56,7 +56,7 @@ botonBuscar.addEventListener('click', (buscarPeliculas))
 
 //1° Funcion: Se encarga de recibir el id que tienen todas las peliculas en esta API, el cual nos permite acceder a mas detalles de las mismas
 const masDetalles = async (imdbID) => {
-    const endPoint = `http://www.omdbapi.com/?apikey=${apiKey}&i=${imdbID}`;
+    const endPoint = `https://www.omdbapi.com/?apikey=${apiKey}&i=${imdbID}`;
     const resp = await fetch(endPoint);
     if(!resp.ok){
         console.error('La respuesta no es correcta')
