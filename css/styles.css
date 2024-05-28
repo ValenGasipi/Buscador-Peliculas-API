@@ -10,9 +10,11 @@ body{
 
 .container-lupa{
     width: 80%;
-    max-width: 450px;
     position: relative;
-    display: flex;
+}
+
+#boton-buscar{
+    width: 100%;
 }
 
 .buscar-icono {
@@ -138,7 +140,7 @@ input::placeholder {
 }
 
 .modal-body{
-    width: 50%;
+    width: 70%;
     max-width: 700px;
     min-height: 400px;
     border-radius: 5px;
@@ -147,6 +149,14 @@ input::placeholder {
     padding: 1.5rem;
     margin: auto;
     margin-top: 3rem;
+    overflow: auto;
+    height: 400px;
+    justify-content: center;
+}
+
+.modal-body img{
+    width: 60%;
+    margin: auto;
 }
 
 .valoracion{
@@ -176,7 +186,65 @@ input::placeholder {
     cursor: pointer;
 }
 
-@media (width >= 600){
-    
+.modal-body h2{
+    font-size: 1.5em;
 }
 
+.modal-body p{
+    width: 100%;
+}
+
+
+
+
+.modal-body::-webkit-scrollbar {
+    width: 12px; 
+    height: 12px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: #6c887f; 
+    border-radius: 10px; 
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: #047857; 
+    border-radius: 10px; 
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: #036449;
+}
+
+@media (min-width: 650px){
+    .container-lupa{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        max-width: 1000px;
+    }
+
+    .lupa{
+        width: 90%;
+        margin-top: .7rem;
+    }
+
+    #boton-buscar{
+        width: 30%;
+    }
+}
+
+@media (min-width: 750px){
+    .modal-body img{
+        width: 100%;
+    }
+
+    .img-modal{
+        margin-right: .5rem;
+    }
+
+    .modal-body{
+        display: flex;
+        justify-content: space-around;
+    }
+}

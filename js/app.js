@@ -105,12 +105,12 @@ containerPeliculas.addEventListener('click', (e) => {
 //Creo el modal
 function mostrarModal(peli){
     modal.innerHTML = `
-    <div class="modal-body flex">
-        <div class="mr-2">
+    <div class="modal-body">
+        <div class="mb-4 img-modal">
             <img src="${peli.Poster}" alt="${peli.Title}" class="rounded-lg">
         </div>
-        <div class="w-2/4">
-        <h2 class="text-3xl font-bold mb-4">${peli.Title}</h2>
+        <div class="w-full">
+        <h2 class="font-bold mb-4">${peli.Title}</h2>
         <p class="mb-4"><b>Resumen:</b> ${peli.Plot}</p>
         <p class="mb-4"><b>Director:</b> ${peli.Director}</p>
         <p class="mb-4"><b>Año:</b> ${peli.Year}</p>
