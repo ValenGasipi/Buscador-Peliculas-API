@@ -1,5 +1,12 @@
 const d = document
 
+// Preguntamos si existe el SW en el navegador, en caso de que si, se registra con la ruta al archivo, sino, le aparece una alerta. Todos los navegdores modernos lo soportan asi que no deberia haber problema con el usuario
+if( 'serviceWorker' in navigator ){
+    navigator.serviceWorker.register('sw.js');
+} else {
+    alert('Tu navegador no soporta esta Web APP');
+}
+
 //Obtengo la clave para usar la api y la almaceno en una constante. También creo constantes para la manipulación del DOM
 const apiKey = 'dbb0c93f';
 const botonBuscar = d.getElementById('boton-buscar');
